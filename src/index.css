@@ -1,0 +1,105 @@
+/* Styling only. No rule in here decides whether a field is valid.
+   The look follows slide 11: the message sits directly under its field, and
+   a bad field is marked by a thicker border as well as by the text, so the
+   state is not carried by color alone. */
+
+:root {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 24rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+
+form {
+  background: #ffffff;
+  border: 1px solid #878d96;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #6b7280;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+/* A field the component has marked as wrong. The attribute the stylesheet
+   hangs this on is the same one a screen reader reads, so the two can never
+   disagree with each other. */
+input[aria-invalid="true"] {
+  border-color: #b91c1c;
+  border-width: 2px;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1f2937;
+  outline-offset: 2px;
+}
+
+/* The two message paragraphs. They are always in the markup, because
+   aria-describedby points at them whether or not there is anything to say.
+   An empty one takes up no room. */
+#email-error,
+#password-error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin: 0.35rem 0 1.1rem;
+}
+
+#email-error:empty,
+#password-error:empty {
+  margin: 0 0 1.1rem;
+}
+
+button {
+  font: inherit;
+  color: #ffffff;
+  background: #5b21b6;
+  border: 1px solid #5b21b6;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4c1d95;
+  border-color: #4c1d95;
+}
+
+/* The success message from part 3 */
+[role="status"] {
+  max-width: 24rem;
+  margin: 2.5rem auto;
+  background: #ffffff;
+  border: 1px solid #878d96;
+  border-radius: 8px;
+  padding: 1.25rem;
+  font-size: 1.1rem;
+}

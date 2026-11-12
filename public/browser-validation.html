@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML validation on its own</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 24rem;
+             margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.5; }
+      label { display: block; font-weight: 600; margin-top: 1rem; }
+      input { font: inherit; width: 100%; box-sizing: border-box;
+              padding: 0.45rem 0.6rem; border: 1px solid #6b7280;
+              border-radius: 6px; }
+      button { font: inherit; margin-top: 1.4rem; color: #ffffff;
+               background: #5b21b6; border: 1px solid #5b21b6;
+               border-radius: 6px; padding: 0.5rem 1.25rem; }
+    </style>
+  </head>
+  <body>
+    <h1>HTML validation on its own</h1>
+    <p>No JavaScript here. Press Sign up and read the message the browser
+      writes. You did not choose those words, and they differ between
+      browsers. That is why the React version turns this off.</p>
+
+    <!-- Slide 4 -->
+    <form>
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+      <label for="password">Password</label>
+      <input id="password" type="password" required minlength="8" />
+      <button type="submit">Sign up</button>
+    </form>
+  </body>
+</html>
