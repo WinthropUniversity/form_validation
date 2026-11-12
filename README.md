@@ -3,10 +3,6 @@
 WEBD 245, Front End Web Development. The sign up form from the lecture, as a
 project you can run.
 
-The code in `src/SignUpForm.jsx` and `src/examples/EmailField.jsx` is exactly
-the code on the slides. Nothing has been added to it and nothing has been
-left out.
-
 ## Install and run
 
 You need Node.js. Check with `node -v`. If that prints a version number you
@@ -35,24 +31,6 @@ Press Ctrl and C in the terminal to stop the server.
 
 To make a finished copy for hosting, run `npm run build`. It writes a `dist`
 folder. You do not need it to work through the example.
-
-## What is in the project
-
-| File | Slides | What it is |
-| --- | --- | --- |
-| `src/SignUpForm.jsx` | 6 to 10 | The whole example. This is what runs. |
-| `src/examples/EmailField.jsx` | 5 | One controlled input on its own |
-| `public/browser-validation.html` | 4 | The same form in plain HTML, no React |
-| `src/App.jsx` | 2 | The page heading and the form |
-| `src/index.css` | 11 | Styling only. No rule here decides anything. |
-
-`EmailField.jsx` is not wired into the page. To look at it, open `src/App.jsx`
-and swap `SignUpForm` for `EmailField`.
-
-`browser-validation.html` is served as it is. With the server running, open
-`http://localhost:5173/browser-validation.html`. Press Sign up and read the
-message. The browser wrote it, not you. That is the slide 4 point, and it is
-the reason the React form turns this off.
 
 ## How the code works
 
@@ -184,15 +162,6 @@ visible state and the announced state cannot drift apart. There is no second
 The border is in addition to the message, never instead of it. Colour alone
 is not readable to everyone, so the text does the work and the border
 reinforces it.
-
-## What is not in here
-
-The lecture also covered things this example does not do, on purpose.
-
-- **Server side checking.** The browser can be bypassed, so everything has to
-  be checked again on the server. There is no server in this project.
-- **Log in.** A failed log in gets one message that does not say which of the
-  two was wrong, so an attacker cannot learn which email addresses exist.
 
 ## References
 
